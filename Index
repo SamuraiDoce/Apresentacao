@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Advocacia Gimenez – Especialistas em Cível, Criminal, Trabalhista e Previdenciário. Suzano – SP.">
+<title>Advocacia Gimenez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0C0C0C;
+  --charcoal: #141414;
+  --graphite: #1C1C1E;
+  --graphite-mid: #232323;
+  --gold: #C9A84C;
+  --gold-light: #E2C47A;
+  --gold-pale: #F5E8C8;
+  --white: #FAFAF8;
+  --off-white: #F0ECE4;
+  --muted: #8A8880;
+  --muted-light: #B5B2AB;
+  --border: rgba(201,168,76,0.15);
+  --border-subtle: rgba(255,255,255,0.06);
+  --transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+::selection { background: var(--gold); color: var(--black); }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+  transition: var(--transition);
+  border-bottom: 1px solid transparent;
+}
+nav.scrolled {
+  background: rgba(12,12,12,0.97);
+  backdrop-filter: blur(20px);
+  border-bottom-color: var(--border);
+}
+.nav-logo {
+  display: flex; flex-direction: column; gap: 1px;
+  text-decoration: none;
+  align-items: center; justify-content: center;
+}
+.nav-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem; font-weight: 500; letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.nav-logo-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: .95rem; font-weight: 300; letter-spacing: 4px;
+  color: var(--white); text-transform: uppercase;
+  line-height: 1.1;
+}
+.nav-links {
+  display: flex; gap: 40px; list-style: none;
+}
+.nav-links a {
+  font-size: .78rem; font-weight: 400; letter-spacing: 1.8px;
+  color: var(--muted-light); text-decoration: none; text-transform: uppercase;
+  position: relative; padding-bottom: 4px;
+  transition: color .3s;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: var(--gold);
+  transition: width .35s ease;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  font-size: .75rem; font-weight: 500; letter-spacing: 2px;
+  color: var(--gold); text-decoration: none; text-transform: uppercase;
+  border: 1px solid var(--gold);
+  padding: 10px 22px; border-radius: 1px;
+  transition: var(--transition);
+}
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer;
+  background: none; border: none; padding: 6px;
+}
+.nav-hamburger span {
+  display: block; width: 24px; height: 1px; background: var(--white);
+  transition: var(--transition);
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.mobile-menu {
+  display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+  background: var(--charcoal); z-index: 999;
+  flex-direction: column; align-items: center; justify-content: center; gap: 40px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 300; color: var(--white);
+  text-decoration: none; letter-spacing: 2px;
+  transition: color .3s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100dvh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 120px 5% 80px;
+  position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,168,76,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
+    linear-gradient(160deg, #0C0C0C 0%, #141418 50%, #0C0C0C 100%);
+}
+.hero-line {
+  position: absolute; top: 0; left: 8%;
+  width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  opacity: .12;
+}
+.hero-content { position: relative; z-index: 1; max-width: 820px; }
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 32px;
+  animation: fadeUp .8s ease both;
+}
+.hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
+.hero-eyebrow span {
+  font-size: .68rem; font-weight: 400; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 300; line-height: 1.12; letter-spacing: -0.5px;
+  color: var(--white); margin-bottom: 28px;
+  animation: fadeUp .8s .12s ease both;
+}
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+.hero-sub {
+  font-size: 1rem; font-weight: 300; color: var(--muted-light);
+  max-width: 520px; line-height: 1.75; margin-bottom: 48px;
+  animation: fadeUp .8s .22s ease both;
+}
+.hero-actions {
+  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+  animation: fadeUp .8s .32s ease both;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--gold); color: var(--black);
+  font-size: .78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  padding: 18px 36px; text-decoration: none; border: none; cursor: pointer;
+  position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.btn-primary::before {
+  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left .5s ease;
+}
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.25); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: .78rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted-light); text-decoration: none;
+  transition: color .3s;
+}
+.btn-ghost:hover { color: var(--white); }
+.btn-ghost svg { transition: transform .3s; }
+.btn-ghost:hover svg { transform: translateX(4px); }
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 5%;
+  display: flex; align-items: center; gap: 12px;
+  font-size: .65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted);
+  animation: fadeUp .8s .5s ease both;
+}
+.hero-scroll-bar {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+  animation: scrollBar 2s ease-in-out infinite;
+}
+@keyframes scrollBar { 0%,100%{height:48px;opacity:.6;} 50%{height:28px;opacity:1;} }
+.hero-badge {
+  position: absolute; right: 5%; bottom: 40px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+  animation: fadeUp .8s .45s ease both;
+}
+.hero-badge-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem; font-weight: 300; color: var(--gold); line-height: 1;
+}
+.hero-badge-text { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: right; }
+
+/* ── DIVIDER ── */
+.divider {
+  display: flex; align-items: center; gap: 20px;
+  padding: 0 5%; margin: 0 auto;
+}
+.divider-line { flex: 1; height: 1px; background: var(--border-subtle); }
+.divider-icon { color: var(--gold); font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap; }
+
+/* ── SECTIONS ── */
+section { padding: 110px 5%; }
+
+.section-header { margin-bottom: 70px; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: .65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 18px;
+}
+.section-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2;
+  color: var(--white); letter-spacing: -0.3px;
+}
+.section-title em { font-style: italic; color: var(--gold-light); }
+.section-desc {
+  font-size: .93rem; font-weight: 300; color: var(--muted-light);
+  max-width: 520px; line-height: 1.8; margin-top: 18px;
+}
+
+/* ── SOBRE ── */
+.sobre { background: var(--charcoal); }
+.sobre-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.sobre-visual {
+  position: relative;
+}
+.sobre-frame {
+  aspect-ratio: 3/4; max-height: 520px;
+  background: linear-gradient(135deg, var(--graphite) 0%, var(--graphite-mid) 100%);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.sobre-frame::before {
+  content: '';
+  position: absolute; inset: 16px;
+  border: 1px solid rgba(201,168,76,0.1);
+}
+.sobre-frame-monogram {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 7rem; font-weight: 300; color: rgba(201,168,76,0.08);
+  letter-spacing: -4px; line-height: 1;
+  user-select: none;
+}
+.sobre-accent {
+  position: absolute; bottom: -20px; right: -20px;
+  width: 120px; height: 120px;
+  border: 1px solid var(--border);
+  background: var(--graphite);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+}
+.sobre-accent-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1;
+}
+.sobre-accent-label { font-size: .6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.sobre-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; line-height: 1.25;
+  color: var(--white); margin-bottom: 28px;
+}
+.sobre-text h3 em { font-style: italic; color: var(--gold-light); }
+.sobre-text p {
+  font-size: .93rem; font-weight: 300; color: var(--muted-light);
+  line-height: 1.85; margin-bottom: 20px;
+}
+.sobre-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  border: 1px solid var(--border); margin-top: 44px;
+}
+.stat {
+  padding: 24px 20px; text-align: center;
+  border-right: 1px solid var(--border);
+}
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1;
+}
+.stat-label { font-size: .65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+
+/* ── SERVIÇOS ── */
+.servicos { background: var(--black); }
+.servicos-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  border: 1px solid var(--border-subtle); margin-top: 60px;
+}
+.service-card {
+  padding: 52px 40px; position: relative; overflow: hidden;
+  background: var(--charcoal);
+  border-right: 1px solid var(--border-subtle);
+  transition: var(--transition); cursor: default;
+}
+.service-card:nth-child(3n) { border-right: none; }
+.service-card:nth-child(n+4) { border-top: 1px solid var(--border-subtle); }
+.service-card::before {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 2px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .45s ease;
+}
+.service-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
+  opacity: 0; transition: opacity .45s ease;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover::after { opacity: 1; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+.service-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: .9rem; color: var(--gold); letter-spacing: 2px;
+  margin-bottom: 32px; display: block;
+}
+.service-icon {
+  width: 52px; height: 52px; margin-bottom: 28px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--border);
+  transition: border-color .3s;
+}
+.service-card:hover .service-icon { border-color: var(--gold); }
+.service-icon svg { width: 22px; height: 22px; stroke: var(--gold); stroke-width: 1.2; fill: none; }
+.service-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; color: var(--white);
+  margin-bottom: 16px; line-height: 1.2;
+}
+.service-desc {
+  font-size: .85rem; font-weight: 300; color: var(--muted);
+  line-height: 1.75;
+}
+.service-arrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .7rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold); margin-top: 32px;
+  opacity: 0; transform: translateX(-8px);
+  transition: var(--transition);
+}
+.service-card:hover .service-arrow { opacity: 1; transform: none; }
+
+/* ── AVALIAÇÕES ── */
+.avaliacoes { background: var(--charcoal); }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
+}
+.review-card {
+  padding: 40px 36px;
+  background: var(--graphite);
+  border: 1px solid var(--border-subtle);
+  position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.review-card::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem; line-height: 1; color: var(--gold);
+  position: absolute; top: 16px; right: 28px; opacity: .15;
+}
+.review-card:hover { border-color: var(--border); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+.review-stars { display: flex; gap: 4px; margin-bottom: 24px; }
+.star { color: var(--gold); font-size: .85rem; }
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem; font-weight: 300; font-style: italic;
+  color: var(--off-white); line-height: 1.7; margin-bottom: 28px;
+}
+.review-author { display: flex; align-items: center; gap: 14px; }
+.review-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--graphite-mid), var(--graphite));
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: .95rem; color: var(--gold);
+}
+.review-name { font-size: .82rem; font-weight: 500; color: var(--white); }
+.review-location { font-size: .72rem; font-weight: 300; color: var(--muted); margin-top: 2px; }
+
+/* ── CONTATO ── */
+.contato { background: var(--black); }
+.contato-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start;
+}
+.contato-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 300;
+  color: var(--white); line-height: 1.25; margin-bottom: 20px;
+}
+.contato-info h3 em { font-style: italic; color: var(--gold-light); }
+.contato-info p {
+  font-size: .9rem; font-weight: 300; color: var(--muted-light);
+  line-height: 1.8; margin-bottom: 44px;
+}
+.contato-detail {
+  display: flex; flex-direction: column; gap: 28px;
+}
+.contato-item { display: flex; align-items: flex-start; gap: 18px; }
+.contato-item-icon {
+  width: 44px; height: 44px; min-width: 44px;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.contato-item-icon svg { width: 18px; height: 18px; stroke: var(--gold); stroke-width: 1.2; fill: none; }
+.contato-item-label { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+.contato-item-val { font-size: .88rem; font-weight: 300; color: var(--muted-light); line-height: 1.5; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+.form-input, .form-textarea {
+  background: var(--charcoal); border: 1px solid var(--border-subtle);
+  color: var(--white); font-family: 'Inter', sans-serif; font-size: .88rem; font-weight: 300;
+  padding: 16px 20px; outline: none;
+  transition: border-color .3s, box-shadow .3s;
+  -webkit-appearance: none;
+}
+.form-textarea { resize: none; height: 130px; }
+.form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.06);
+}
+.btn-submit {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 14px;
+  background: transparent; border: 1px solid var(--gold);
+  color: var(--gold); font-family: 'Inter', sans-serif;
+  font-size: .75rem; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 18px 40px; cursor: pointer; position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.btn-submit::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--gold); transform: scaleX(0); transform-origin: left;
+  transition: transform .4s ease;
+}
+.btn-submit:hover::before { transform: scaleX(1); }
+.btn-submit:hover { color: var(--black); }
+.btn-submit span { position: relative; z-index: 1; }
+.btn-submit svg { position: relative; z-index: 1; transition: transform .3s; }
+.btn-submit:hover svg { transform: translateX(4px); }
+.form-success {
+  display: none; padding: 20px 24px;
+  background: rgba(201,168,76,0.08); border: 1px solid var(--border);
+  font-size: .85rem; color: var(--gold-light);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--charcoal);
+  border-top: 1px solid var(--border-subtle);
+  padding: 50px 5%;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+}
+.footer-logo { text-decoration: none; }
+.footer-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--white);
+}
+.footer-logo-sub { font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-top: 3px; }
+.footer-copy { font-size: .72rem; font-weight: 300; color: var(--muted); letter-spacing: .5px; }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a {
+  font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .3s;
+}
+.footer-links a:hover { color: var(--gold); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .sobre-grid { grid-template-columns: 1fr; gap: 50px; }
+  .sobre-visual { max-width: 380px; }
+  .servicos-grid { grid-template-columns: 1fr 1fr; }
+  .service-card:nth-child(2) { border-right: none; }
+  .service-card:nth-child(3) { border-right: none; border-top: 1px solid var(--border-subtle); grid-column: 1/-1; }
+  .contato-grid { grid-template-columns: 1fr; gap: 50px; }
+}
+@media (max-width: 768px) {
+  section { padding: 80px 5%; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+  .servicos-grid { grid-template-columns: 1fr; }
+  .service-card { border-right: none !important; border-top: 1px solid var(--border-subtle); }
+  .service-card:first-child { border-top: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .sobre-stats { grid-template-columns: 1fr 1fr; }
+  .stat:last-child { border-top: 1px solid var(--border); grid-column: 1/-1; border-right: none; }
+  .hero h1 { font-size: clamp(2.4rem, 8vw, 3.5rem); }
+  .hero-badge { display: none; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .footer-links { flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .sobre-visual { max-width: 100%; }
+  .sobre-accent { bottom: -10px; right: -10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-name">Advocacia</span>
+    <span class="nav-logo-sub">Gimenez</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#avaliacoes">Avaliações</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Fale Comigo</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" class="mobile-link">Sobre</a>
+  <a href="#servicos" class="mobile-link">Serviços</a>
+  <a href="#avaliacoes" class="mobile-link">Avaliações</a>
+  <a href="#contato" class="mobile-link">Contato</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span>Advocacia Especializada · Suzano – SP</span>
+    </div>
+    <h1>Advocacia com<br><em>Excelência,</em><br>Ética e Humanização</h1>
+    <p class="hero-sub">Atendimento jurídico de alto nível, com dedicação genuína a cada caso. Sua segurança e tranquilidade são nossa prioridade.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-primary">
+        <span>Fale Comigo</span>
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#servicos" class="btn-ghost">
+        <span>Ver Serviços</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-bar"></div>
+    <span>Scroll</span>
+  </div>
+  <div class="hero-badge">
+    <div class="hero-badge-number">100%</div>
+    <div class="hero-badge-text">Comprometimento<br>em cada caso</div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-visual reveal">
+      <div class="sobre-frame">
+        <div class="sobre-frame-monogram">AG</div>
+      </div>
+      <div class="sobre-accent">
+        <div class="sobre-accent-num">+10</div>
+        <div class="sobre-accent-label">Anos de<br>Experiência</div>
+      </div>
+    </div>
+    <div class="sobre-text">
+      <div class="section-tag reveal">Sobre</div>
+      <h3 class="reveal reveal-delay-1">Comprometimento<br>com cada <em>cliente</em></h3>
+      <p class="reveal reveal-delay-1">A Advocacia Gimenez construiu sua trajetória com base na excelência técnica, ética inabalável e busca incansável pelos melhores resultados. Cada caso é tratado com atenção singular e cuidado personalizado.</p>
+      <p class="reveal reveal-delay-2">Com atuação multidisciplinar, o escritório oferece segurança jurídica real para pessoas e empresas que buscam resolução eficaz de seus conflitos, com a clareza e a tranquilidade que todo cliente merece.</p>
+      <div class="sobre-stats reveal reveal-delay-2">
+        <div class="stat">
+          <div class="stat-num">Alta</div>
+          <div class="stat-label">Taxa de<br>Sucesso</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Ética</div>
+          <div class="stat-label">Princípio<br>Central</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">Suzano</div>
+          <div class="stat-label">Base de<br>Atuação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-icon">&#9670;</div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="section-header reveal">
+    <div class="section-tag">Áreas de Atuação</div>
+    <h2 class="section-title">Soluções jurídicas<br>para <em>cada situação</em></h2>
+    <p class="section-desc">Atuação especializada com profundidade técnica e atenção às necessidades individuais de cada cliente.</p>
+  </div>
+  <div class="servicos-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="3" width="20" height="18" rx="1"/></svg>
+      </div>
+      <div class="service-title">Cível e Criminal</div>
+      <p class="service-desc">Atuação completa na defesa dos seus direitos, desde relações cíveis e contratos até defesa criminal especializada.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-num">02</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+      </div>
+      <div class="service-title">Direito Administrativo</div>
+      <p class="service-desc">Defesa de servidores públicos, licitações, contratos administrativos e processos disciplinares com amplo domínio técnico.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-num">03</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      </div>
+      <div class="service-title">Direito Imobiliário</div>
+      <p class="service-desc">Assessoria em compra, venda, locação, regularização de imóveis, usucapião e litígios envolvendo propriedades.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      </div>
+      <div class="service-title">Direito Público</div>
+      <p class="service-desc">Proteção dos direitos frente à administração pública, atuando em mandados de segurança e ações civis públicas.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <span class="service-num">05</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+      </div>
+      <div class="service-title">Trabalhista</div>
+      <p class="service-desc">Defesa dos direitos do trabalhador e orientação corporativa, cobrindo rescisões, horas extras e assédio moral no trabalho.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <span class="service-num">06</span>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <div class="service-title">Previdenciário</div>
+      <p class="service-desc">Aposentadorias, pensões, auxílios e planejamento previdenciário para garantir o seu benefício junto ao INSS.</p>
+      <div class="service-arrow">
+        <span>Saiba mais</span>
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-icon">&#9670;</div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- AVALIAÇÕES -->
+<section class="avaliacoes" id="avaliacoes">
+  <div class="section-header reveal">
+    <div class="section-tag">Avaliações</div>
+    <h2 class="section-title">O que dizem<br>nossos <em>clientes</em></h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card reveal">
+      <div class="review-stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-text">"Excelente profissional. Superou todas as minhas expectativas com atenção, competência e clareza em cada etapa do processo."</p>
+      <div class="review-author">
+        <div class="review-avatar">C</div>
+        <div>
+          <div class="review-name">Carlos Mendes</div>
+          <div class="review-location">Suzano, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-1">
+      <div class="review-stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-text">"Atendimento rápido, equipe muito atenciosa e sempre disponível. Me senti amparada em um momento muito difícil."</p>
+      <div class="review-author">
+        <div class="review-avatar">L</div>
+        <div>
+          <div class="review-name">Letícia Rocha</div>
+          <div class="review-location">Suzano, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card reveal reveal-delay-2">
+      <div class="review-stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+      </div>
+      <p class="review-text">"Advogados extremamente humanos e dedicados. Trataram meu caso com seriedade e sensibilidade que raramente se encontra."</p>
+      <div class="review-author">
+        <div class="review-avatar">R</div>
+        <div>
+          <div class="review-name">Roberto Alves</div>
+          <div class="review-location">Mogi das Cruzes, SP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <div class="divider-icon">&#9670;</div>
+  <div class="divider-line"></div>
+</div>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+  <div class="contato-grid">
+    <div>
+      <div class="section-tag reveal">Contato</div>
+      <div class="contato-info">
+        <h3 class="reveal reveal-delay-1">Inicie uma<br><em>consulta</em> hoje</h3>
+        <p class="reveal reveal-delay-1">Entre em contato para agendar uma consulta. Respondemos com brevidade e discrição.</p>
+      </div>
+      <div class="contato-detail reveal reveal-delay-2">
+        <div class="contato-item">
+          <div class="contato-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div>
+            <div class="contato-item-label">Endereço</div>
+            <div class="contato-item-val">Suzano – SP</div>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="contato-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contato-item-label">Telefone / WhatsApp</div>
+            <div class="contato-item-val">(11) 4742-1944<br>(11) 94797-5052<br>(11) 99741-2106</div>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="contato-item-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="contato-item-label">Horário</div>
+            <div class="contato-item-val">Segunda a Sexta<br>08:00 – 18:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-input" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-mail</label>
+            <input type="email" class="form-input" placeholder="seu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Telefone</label>
+          <input type="tel" class="form-input" placeholder="(16) 00000-0000">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Assunto</label>
+          <input type="text" class="form-input" placeholder="Descreva brevemente seu caso">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensagem</label>
+          <textarea class="form-textarea" placeholder="Conte-nos mais sobre sua situação..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>Enviar Mensagem</span>
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="form-success" id="formSuccess">
+          Mensagem recebida. Entraremos em contato em breve.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#hero" class="footer-logo">
+    <div class="footer-logo-name">Advocacia Gimenez</div>
+  </a>
+  <div class="footer-copy">© 2026 Advocacia Gimenez. Todos os direitos reservados.</div>
+  <div class="footer-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 72;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+      }
+    });
+  });
+
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit span');
+    btn.textContent = 'Enviando...';
+    setTimeout(() => {
+      form.reset();
+      btn.textContent = 'Enviar Mensagem';
+      success.style.display = 'block';
+      setTimeout(() => { success.style.display = 'none'; }, 5000);
+    }, 1200);
+  });
+
+  document.querySelectorAll('.btn-primary, .btn-submit').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      if(navigator.vibrate) navigator.vibrate(30);
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
