@@ -4,941 +4,590 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Advocacia Gimenez – Especialistas em Cível, Criminal, Trabalhista e Previdenciário. Suzano – SP.">
-<title>Advocacia Gimenez</title>
+<meta name="description" content="Aprenda espanhol com uma professora nativa do Peru. Aulas personalizadas, método acelerado e conversação real. Fale espanhol com confiança em poucas semanas!">
+<meta name="keywords" content="aulas de espanhol, professora de espanhol, espanhol para brasileiros, aprender espanhol rápido, espanhol nativa">
+<meta property="og:title" content="Aprenda Espanhol com uma Nativa do Peru 🇵🇪">
+<meta property="og:description" content="Fale espanhol com confiança em poucas semanas. Aulas personalizadas com professora nativa.">
+<title>Aprenda Espanhol com Professora Nativa do Peru 🇵🇪 | Aulas Online</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
 <style>
-:root {
-  --black: #0C0C0C;
-  --charcoal: #141414;
-  --graphite: #1C1C1E;
-  --graphite-mid: #232323;
-  --gold: #C9A84C;
-  --gold-light: #E2C47A;
-  --gold-pale: #F5E8C8;
-  --white: #FAFAF8;
-  --off-white: #F0ECE4;
-  --muted: #8A8880;
-  --muted-light: #B5B2AB;
-  --border: rgba(201,168,76,0.15);
-  --border-subtle: rgba(255,255,255,0.06);
-  --transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
+  /* ===================== RESET & BASE ===================== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --red: #E63946;
+    --red-dark: #c1121f;
+    --red-light: #ff6b6b;
+    --white: #FFFFFF;
+    --bg: #F8F4F0;
+    --bg2: #F1FAEE;
+    --dark: #1D1D1D;
+    --dark2: #2d2d2d;
+    --muted: #6b7280;
+    --muted2: #9ca3af;
+    --wpp: #25D366;
+    --wpp-dark: #1ebe5d;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+    --glass: rgba(255,255,255,0.72);
+    --radius: 20px;
+    --radius-lg: 28px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--dark); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  /* ===================== TYPOGRAPHY ===================== */
+  .section-tag { display: inline-flex; align-items: center; gap: 7px; background: rgba(230,57,70,0.1); color: var(--red); font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 50px; margin-bottom: 14px; }
+  .section-title { font-size: clamp(1.6rem, 5vw, 2.4rem); font-weight: 800; line-height: 1.2; color: var(--dark); }
+  .section-title span { color: var(--red); }
+  .section-sub { color: var(--muted); font-size: .95rem; line-height: 1.65; margin-top: 10px; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+  /* ===================== BUTTONS ===================== */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; border-radius: 50px; padding: 15px 28px; cursor: pointer; border: none; position: relative; overflow: hidden; transition: transform .18s, box-shadow .18s, filter .18s; -webkit-tap-highlight-color: transparent; }
+  .btn:active { transform: scale(0.96); }
+  .btn-wpp { background: var(--wpp); color: #fff; box-shadow: 0 6px 28px rgba(37,211,102,0.38); }
+  .btn-wpp:hover { filter: brightness(1.07); box-shadow: 0 10px 36px rgba(37,211,102,0.5); }
+  .btn-red { background: var(--red); color: #fff; box-shadow: 0 6px 28px rgba(230,57,70,0.32); }
+  .btn-red:hover { filter: brightness(1.08); box-shadow: 0 10px 36px rgba(230,57,70,0.45); }
+  .btn-outline { background: transparent; color: var(--red); border: 2px solid var(--red); }
+  .btn-outline:hover { background: var(--red); color: #fff; }
+  .btn-lg { padding: 18px 36px; font-size: 1.08rem; }
+  .btn-full { width: 100%; }
+  .ripple-el { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.28); transform: scale(0); animation: ripple-anim 0.55s linear; pointer-events: none; }
+  @keyframes ripple-anim { to { transform: scale(4); opacity: 0; } }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.6;
-}
+  /* ===================== FLOATING WPP ===================== */
+  .wpp-float { position: fixed; bottom: 84px; right: 18px; z-index: 9999; width: 60px; height: 60px; border-radius: 50%; background: var(--wpp); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.45); animation: float-pulse 2.2s infinite; cursor: pointer; text-decoration: none; transition: transform .2s; }
+  .wpp-float:active { transform: scale(0.9); }
+  .wpp-float svg { width: 32px; height: 32px; }
+  .wpp-float-badge { position: absolute; top: -4px; right: -4px; background: var(--red); color: #fff; font-size: .6rem; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
+  @keyframes float-pulse {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.45), 0 0 0 0 rgba(37,211,102,0.35); }
+    50% { box-shadow: 0 6px 24px rgba(37,211,102,0.6), 0 0 0 16px rgba(37,211,102,0); }
+  }
 
-::selection { background: var(--gold); color: var(--black); }
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--black); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+  /* ===================== STICKY BAR ===================== */
+  .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9998; background: #fff; border-top: 1px solid var(--border); padding: 10px 16px; display: flex; gap: 10px; box-shadow: 0 -4px 20px rgba(0,0,0,0.07); }
+  .sticky-bar .btn { flex: 1; font-size: .9rem; padding: 13px 12px; }
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 0 5%;
-  display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
-  transition: var(--transition);
-  border-bottom: 1px solid transparent;
-}
-nav.scrolled {
-  background: rgba(12,12,12,0.97);
-  backdrop-filter: blur(20px);
-  border-bottom-color: var(--border);
-}
-.nav-logo {
-  display: flex; flex-direction: column; gap: 1px;
-  text-decoration: none;
-  align-items: center; justify-content: center;
-}
-.nav-logo-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.35rem; font-weight: 500; letter-spacing: 2px;
-  color: var(--gold);
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-.nav-logo-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: .95rem; font-weight: 300; letter-spacing: 4px;
-  color: var(--white); text-transform: uppercase;
-  line-height: 1.1;
-}
-.nav-links {
-  display: flex; gap: 40px; list-style: none;
-}
-.nav-links a {
-  font-size: .78rem; font-weight: 400; letter-spacing: 1.8px;
-  color: var(--muted-light); text-decoration: none; text-transform: uppercase;
-  position: relative; padding-bottom: 4px;
-  transition: color .3s;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: 0; left: 0;
-  width: 0; height: 1px; background: var(--gold);
-  transition: width .35s ease;
-}
-.nav-links a:hover { color: var(--white); }
-.nav-links a:hover::after { width: 100%; }
-.nav-cta {
-  font-size: .75rem; font-weight: 500; letter-spacing: 2px;
-  color: var(--gold); text-decoration: none; text-transform: uppercase;
-  border: 1px solid var(--gold);
-  padding: 10px 22px; border-radius: 1px;
-  transition: var(--transition);
-}
-.nav-cta:hover { background: var(--gold); color: var(--black); }
-.nav-hamburger {
-  display: none; flex-direction: column; gap: 5px; cursor: pointer;
-  background: none; border: none; padding: 6px;
-}
-.nav-hamburger span {
-  display: block; width: 24px; height: 1px; background: var(--white);
-  transition: var(--transition);
-}
-.nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-.nav-hamburger.open span:nth-child(2) { opacity: 0; }
-.nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-.mobile-menu {
-  display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
-  background: var(--charcoal); z-index: 999;
-  flex-direction: column; align-items: center; justify-content: center; gap: 40px;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem; font-weight: 300; color: var(--white);
-  text-decoration: none; letter-spacing: 2px;
-  transition: color .3s;
-}
-.mobile-menu a:hover { color: var(--gold); }
+  /* ===================== HERO ===================== */
+  .hero { background: linear-gradient(145deg, #1D1D1D 0%, #2d1a1a 50%, #3d1515 100%); min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 0 0 130px; position: relative; overflow: hidden; }
+  .hero-bg-decor { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .hero-bg-decor::before { content: ''; position: absolute; top: -80px; right: -80px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(230,57,70,0.22) 0%, transparent 70%); }
+  .hero-bg-decor::after { content: ''; position: absolute; bottom: 30%; left: -60px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(230,57,70,0.12) 0%, transparent 70%); }
+  .hero-flags { position: absolute; top: 22px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; align-items: center; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.12); padding: 8px 16px; border-radius: 50px; font-size: .78rem; color: rgba(255,255,255,0.85); font-weight: 500; white-space: nowrap; animation: fadeDown .7s ease both; }
+  .hero-avatar-wrap { position: relative; margin-bottom: 28px; animation: heroAvatarIn .8s .1s cubic-bezier(0.34,1.56,0.64,1) both; }
+  .hero-avatar { width: 150px; height: 150px; border-radius: 50%; background: linear-gradient(135deg, #e63946, #c1121f); display: flex; align-items: center; justify-content: center; font-size: 5rem; border: 4px solid rgba(255,255,255,0.15); box-shadow: 0 12px 48px rgba(230,57,70,0.35), 0 0 0 8px rgba(230,57,70,0.1); }
+  .hero-avatar-badge { position: absolute; bottom: 4px; right: 4px; background: var(--wpp); border-radius: 50px; padding: 5px 10px; font-size: .7rem; font-weight: 700; color: #fff; border: 2px solid #fff; white-space: nowrap; }
+  .hero-content { text-align: center; padding: 0 24px; max-width: 480px; animation: fadeUp .7s .2s ease both; }
+  .hero-content .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(230,57,70,0.18); border: 1px solid rgba(230,57,70,0.35); color: #ff9999; font-size: .72rem; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; padding: 5px 13px; border-radius: 50px; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(1.75rem, 7vw, 2.8rem); font-weight: 900; color: #fff; line-height: 1.15; margin-bottom: 12px; }
+  .hero h1 em { color: var(--red-light); font-style: normal; }
+  .hero-sub { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 28px; }
+  .hero-cta-wrap { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+  .hero-stats { display: flex; gap: 20px; justify-content: center; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .hero-stat { text-align: center; }
+  .hero-stat strong { display: block; font-size: 1.35rem; font-weight: 800; color: #fff; }
+  .hero-stat span { font-size: .7rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: .8px; }
 
-/* ── HERO ── */
-.hero {
-  min-height: 100dvh;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 120px 5% 80px;
-  position: relative; overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0; z-index: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,168,76,0.05) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 50%),
-    linear-gradient(160deg, #0C0C0C 0%, #141418 50%, #0C0C0C 100%);
-}
-.hero-line {
-  position: absolute; top: 0; left: 8%;
-  width: 1px; height: 100%; background: linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
-  opacity: .12;
-}
-.hero-content { position: relative; z-index: 1; max-width: 820px; }
-.hero-eyebrow {
-  display: flex; align-items: center; gap: 16px; margin-bottom: 32px;
-  animation: fadeUp .8s ease both;
-}
-.hero-eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
-.hero-eyebrow span {
-  font-size: .68rem; font-weight: 400; letter-spacing: 4px;
-  color: var(--gold); text-transform: uppercase;
-}
-.hero h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
-  font-weight: 300; line-height: 1.12; letter-spacing: -0.5px;
-  color: var(--white); margin-bottom: 28px;
-  animation: fadeUp .8s .12s ease both;
-}
-.hero h1 em { font-style: italic; color: var(--gold-light); }
-.hero-sub {
-  font-size: 1rem; font-weight: 300; color: var(--muted-light);
-  max-width: 520px; line-height: 1.75; margin-bottom: 48px;
-  animation: fadeUp .8s .22s ease both;
-}
-.hero-actions {
-  display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
-  animation: fadeUp .8s .32s ease both;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 12px;
-  background: var(--gold); color: var(--black);
-  font-size: .78rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
-  padding: 18px 36px; text-decoration: none; border: none; cursor: pointer;
-  position: relative; overflow: hidden;
-  transition: var(--transition);
-}
-.btn-primary::before {
-  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-  transition: left .5s ease;
-}
-.btn-primary:hover::before { left: 100%; }
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.25); }
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: .78rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--muted-light); text-decoration: none;
-  transition: color .3s;
-}
-.btn-ghost:hover { color: var(--white); }
-.btn-ghost svg { transition: transform .3s; }
-.btn-ghost:hover svg { transform: translateX(4px); }
-.hero-scroll {
-  position: absolute; bottom: 40px; left: 5%;
-  display: flex; align-items: center; gap: 12px;
-  font-size: .65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted);
-  animation: fadeUp .8s .5s ease both;
-}
-.hero-scroll-bar {
-  width: 1px; height: 48px;
-  background: linear-gradient(to bottom, transparent, var(--gold));
-  animation: scrollBar 2s ease-in-out infinite;
-}
-@keyframes scrollBar { 0%,100%{height:48px;opacity:.6;} 50%{height:28px;opacity:1;} }
-.hero-badge {
-  position: absolute; right: 5%; bottom: 40px;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
-  animation: fadeUp .8s .45s ease both;
-}
-.hero-badge-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem; font-weight: 300; color: var(--gold); line-height: 1;
-}
-.hero-badge-text { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-align: right; }
+  /* ===================== SCROLL REVEAL ===================== */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal-left.visible { opacity: 1; transform: none; }
+  .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal-right.visible { opacity: 1; transform: none; }
+  .reveal-scale { opacity: 0; transform: scale(.92); transition: opacity .6s ease, transform .6s cubic-bezier(0.34,1.3,0.64,1); }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+  .delay-1 { transition-delay: .1s; }
+  .delay-2 { transition-delay: .2s; }
+  .delay-3 { transition-delay: .3s; }
+  .delay-4 { transition-delay: .4s; }
 
-/* ── DIVIDER ── */
-.divider {
-  display: flex; align-items: center; gap: 20px;
-  padding: 0 5%; margin: 0 auto;
-}
-.divider-line { flex: 1; height: 1px; background: var(--border-subtle); }
-.divider-icon { color: var(--gold); font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap; }
+  /* ===================== BENEFITS ===================== */
+  .benefits { background: #fff; padding: 64px 20px; }
+  .benefits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
+  .benefit-card { background: var(--bg); border-radius: var(--radius); padding: 22px 18px; border: 1px solid var(--border); transition: transform .25s, box-shadow .25s; }
+  .benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .benefit-icon { width: 48px; height: 48px; border-radius: 14px; background: rgba(230,57,70,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 12px; }
+  .benefit-card h4 { font-size: .88rem; font-weight: 700; margin-bottom: 4px; }
+  .benefit-card p { font-size: .75rem; color: var(--muted); line-height: 1.5; }
 
-/* ── SECTIONS ── */
-section { padding: 110px 5%; }
+  /* ===================== HOW IT WORKS ===================== */
+  .how { background: var(--bg2); padding: 64px 20px; }
+  .steps { display: flex; flex-direction: column; gap: 0; margin-top: 30px; }
+  .step { display: flex; gap: 18px; align-items: flex-start; padding-bottom: 28px; position: relative; }
+  .step:not(:last-child)::after { content: ''; position: absolute; left: 22px; top: 52px; bottom: 0; width: 2px; background: linear-gradient(to bottom, rgba(230,57,70,0.4), rgba(230,57,70,0.05)); }
+  .step-num { min-width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--red), var(--red-dark)); color: #fff; font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(230,57,70,0.3); flex-shrink: 0; }
+  .step-body h4 { font-size: .95rem; font-weight: 700; margin-bottom: 4px; margin-top: 8px; }
+  .step-body p { font-size: .82rem; color: var(--muted); line-height: 1.55; }
 
-.section-header { margin-bottom: 70px; }
-.section-tag {
-  display: inline-flex; align-items: center; gap: 12px;
-  font-size: .65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold);
-  margin-bottom: 18px;
-}
-.section-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
-.section-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.2;
-  color: var(--white); letter-spacing: -0.3px;
-}
-.section-title em { font-style: italic; color: var(--gold-light); }
-.section-desc {
-  font-size: .93rem; font-weight: 300; color: var(--muted-light);
-  max-width: 520px; line-height: 1.8; margin-top: 18px;
-}
+  /* ===================== DIFFERENTIALS ===================== */
+  .diffs { background: var(--dark); padding: 64px 20px; }
+  .diffs .section-title { color: #fff; }
+  .diffs .section-sub { color: rgba(255,255,255,0.45); }
+  .diffs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 30px; }
+  .diff-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 20px 16px; transition: transform .25s, background .25s; }
+  .diff-card:hover { background: rgba(230,57,70,0.1); transform: translateY(-3px); }
+  .diff-emoji { font-size: 1.8rem; margin-bottom: 10px; }
+  .diff-card h4 { font-size: .85rem; font-weight: 700; color: #fff; margin-bottom: 5px; }
+  .diff-card p { font-size: .75rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
 
-/* ── SOBRE ── */
-.sobre { background: var(--charcoal); }
-.sobre-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
-}
-.sobre-visual {
-  position: relative;
-}
-.sobre-frame {
-  aspect-ratio: 3/4; max-height: 520px;
-  background: linear-gradient(135deg, var(--graphite) 0%, var(--graphite-mid) 100%);
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.sobre-frame::before {
-  content: '';
-  position: absolute; inset: 16px;
-  border: 1px solid rgba(201,168,76,0.1);
-}
-.sobre-frame-monogram {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 7rem; font-weight: 300; color: rgba(201,168,76,0.08);
-  letter-spacing: -4px; line-height: 1;
-  user-select: none;
-}
-.sobre-accent {
-  position: absolute; bottom: -20px; right: -20px;
-  width: 120px; height: 120px;
-  border: 1px solid var(--border);
-  background: var(--graphite);
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
-}
-.sobre-accent-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1;
-}
-.sobre-accent-label { font-size: .6rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.sobre-text h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300; line-height: 1.25;
-  color: var(--white); margin-bottom: 28px;
-}
-.sobre-text h3 em { font-style: italic; color: var(--gold-light); }
-.sobre-text p {
-  font-size: .93rem; font-weight: 300; color: var(--muted-light);
-  line-height: 1.85; margin-bottom: 20px;
-}
-.sobre-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-  border: 1px solid var(--border); margin-top: 44px;
-}
-.stat {
-  padding: 24px 20px; text-align: center;
-  border-right: 1px solid var(--border);
-}
-.stat:last-child { border-right: none; }
-.stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.2rem; font-weight: 300; color: var(--gold); line-height: 1;
-}
-.stat-label { font-size: .65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+  /* ===================== EMOTIONAL BANNER ===================== */
+  .emo-banner { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); padding: 56px 24px; text-align: center; position: relative; overflow: hidden; }
+  .emo-banner::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.07); }
+  .emo-banner::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 150px; height: 150px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .emo-banner h2 { font-size: clamp(1.5rem, 5.5vw, 2.2rem); font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 12px; }
+  .emo-banner p { color: rgba(255,255,255,0.8); font-size: .97rem; line-height: 1.6; margin-bottom: 28px; }
+  .emo-banner .quote { font-size: 1.1rem; font-style: italic; color: rgba(255,255,255,0.9); font-weight: 500; margin-bottom: 28px; padding: 16px 20px; background: rgba(255,255,255,0.1); border-radius: 14px; border-left: 3px solid rgba(255,255,255,0.4); }
 
-/* ── SERVIÇOS ── */
-.servicos { background: var(--black); }
-.servicos-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
-  border: 1px solid var(--border-subtle); margin-top: 60px;
-}
-.service-card {
-  padding: 52px 40px; position: relative; overflow: hidden;
-  background: var(--charcoal);
-  border-right: 1px solid var(--border-subtle);
-  transition: var(--transition); cursor: default;
-}
-.service-card:nth-child(3n) { border-right: none; }
-.service-card:nth-child(n+4) { border-top: 1px solid var(--border-subtle); }
-.service-card::before {
-  content: ''; position: absolute; bottom: 0; left: 0;
-  width: 100%; height: 2px; background: var(--gold);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .45s ease;
-}
-.service-card::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(201,168,76,0.04) 0%, transparent 60%);
-  opacity: 0; transition: opacity .45s ease;
-}
-.service-card:hover::before { transform: scaleX(1); }
-.service-card:hover::after { opacity: 1; }
-.service-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
-.service-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: .9rem; color: var(--gold); letter-spacing: 2px;
-  margin-bottom: 32px; display: block;
-}
-.service-icon {
-  width: 52px; height: 52px; margin-bottom: 28px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--border);
-  transition: border-color .3s;
-}
-.service-card:hover .service-icon { border-color: var(--gold); }
-.service-icon svg { width: 22px; height: 22px; stroke: var(--gold); stroke-width: 1.2; fill: none; }
-.service-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem; font-weight: 400; color: var(--white);
-  margin-bottom: 16px; line-height: 1.2;
-}
-.service-desc {
-  font-size: .85rem; font-weight: 300; color: var(--muted);
-  line-height: 1.75;
-}
-.service-arrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: .7rem; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gold); margin-top: 32px;
-  opacity: 0; transform: translateX(-8px);
-  transition: var(--transition);
-}
-.service-card:hover .service-arrow { opacity: 1; transform: none; }
+  /* ===================== TESTIMONIALS ===================== */
+  .testimonials { background: #fff; padding: 64px 20px; }
+  .testimonials-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+  .testi-card { background: var(--bg); border-radius: var(--radius); padding: 24px 20px; border: 1px solid var(--border); position: relative; }
+  .testi-card::before { content: '"'; position: absolute; top: 14px; right: 18px; font-size: 3.5rem; color: rgba(230,57,70,0.12); font-family: Georgia, serif; line-height: 1; }
+  .testi-stars { color: #f59e0b; font-size: .95rem; margin-bottom: 10px; }
+  .testi-text { font-size: .88rem; line-height: 1.65; color: var(--dark2); margin-bottom: 16px; font-style: italic; }
+  .testi-author { display: flex; align-items: center; gap: 12px; }
+  .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--red), #ff9999); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .testi-name { font-size: .85rem; font-weight: 700; }
+  .testi-role { font-size: .72rem; color: var(--muted); }
+  .testi-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(37,211,102,0.1); color: var(--wpp-dark); font-size: .68rem; font-weight: 600; padding: 3px 9px; border-radius: 50px; margin-top: 6px; }
 
-/* ── AVALIAÇÕES ── */
-.avaliacoes { background: var(--charcoal); }
-.reviews-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px;
-}
-.review-card {
-  padding: 40px 36px;
-  background: var(--graphite);
-  border: 1px solid var(--border-subtle);
-  position: relative; overflow: hidden;
-  transition: var(--transition);
-}
-.review-card::before {
-  content: '\201C';
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 6rem; line-height: 1; color: var(--gold);
-  position: absolute; top: 16px; right: 28px; opacity: .15;
-}
-.review-card:hover { border-color: var(--border); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
-.review-stars { display: flex; gap: 4px; margin-bottom: 24px; }
-.star { color: var(--gold); font-size: .85rem; }
-.review-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; font-weight: 300; font-style: italic;
-  color: var(--off-white); line-height: 1.7; margin-bottom: 28px;
-}
-.review-author { display: flex; align-items: center; gap: 14px; }
-.review-avatar {
-  width: 40px; height: 40px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--graphite-mid), var(--graphite));
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: .95rem; color: var(--gold);
-}
-.review-name { font-size: .82rem; font-weight: 500; color: var(--white); }
-.review-location { font-size: .72rem; font-weight: 300; color: var(--muted); margin-top: 2px; }
+  /* ===================== PRICING TEASER ===================== */
+  .pricing { background: var(--bg2); padding: 64px 20px; }
+  .pricing-card { background: #fff; border-radius: var(--radius-lg); padding: 32px 24px; margin-top: 24px; border: 2px solid rgba(230,57,70,0.15); box-shadow: var(--shadow-lg); text-align: center; position: relative; overflow: hidden; }
+  .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red), var(--red-light)); }
+  .pricing-tag-top { display: inline-block; background: var(--red); color: #fff; font-size: .72rem; font-weight: 700; padding: 4px 14px; border-radius: 50px; margin-bottom: 16px; letter-spacing: .5px; }
+  .pricing-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+  .pricing-price { font-size: 2.8rem; font-weight: 900; color: var(--red); line-height: 1; margin: 10px 0 4px; }
+  .pricing-price span { font-size: 1rem; font-weight: 500; color: var(--muted); }
+  .pricing-desc { font-size: .82rem; color: var(--muted); margin-bottom: 20px; }
+  .pricing-features { list-style: none; text-align: left; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .pricing-features li { display: flex; align-items: center; gap: 10px; font-size: .85rem; }
+  .pricing-features li::before { content: '✓'; color: var(--wpp); font-weight: 700; font-size: 1rem; }
 
-/* ── CONTATO ── */
-.contato { background: var(--black); }
-.contato-grid {
-  display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start;
-}
-.contato-info h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 300;
-  color: var(--white); line-height: 1.25; margin-bottom: 20px;
-}
-.contato-info h3 em { font-style: italic; color: var(--gold-light); }
-.contato-info p {
-  font-size: .9rem; font-weight: 300; color: var(--muted-light);
-  line-height: 1.8; margin-bottom: 44px;
-}
-.contato-detail {
-  display: flex; flex-direction: column; gap: 28px;
-}
-.contato-item { display: flex; align-items: flex-start; gap: 18px; }
-.contato-item-icon {
-  width: 44px; height: 44px; min-width: 44px;
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-}
-.contato-item-icon svg { width: 18px; height: 18px; stroke: var(--gold); stroke-width: 1.2; fill: none; }
-.contato-item-label { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
-.contato-item-val { font-size: .88rem; font-weight: 300; color: var(--muted-light); line-height: 1.5; }
-.contact-form { display: flex; flex-direction: column; gap: 20px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.form-group { display: flex; flex-direction: column; gap: 8px; }
-.form-label { font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
-.form-input, .form-textarea {
-  background: var(--charcoal); border: 1px solid var(--border-subtle);
-  color: var(--white); font-family: 'Inter', sans-serif; font-size: .88rem; font-weight: 300;
-  padding: 16px 20px; outline: none;
-  transition: border-color .3s, box-shadow .3s;
-  -webkit-appearance: none;
-}
-.form-textarea { resize: none; height: 130px; }
-.form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
-.form-input:focus, .form-textarea:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201,168,76,0.06);
-}
-.btn-submit {
-  align-self: flex-start;
-  display: inline-flex; align-items: center; gap: 14px;
-  background: transparent; border: 1px solid var(--gold);
-  color: var(--gold); font-family: 'Inter', sans-serif;
-  font-size: .75rem; font-weight: 500; letter-spacing: 2.5px; text-transform: uppercase;
-  padding: 18px 40px; cursor: pointer; position: relative; overflow: hidden;
-  transition: var(--transition);
-}
-.btn-submit::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--gold); transform: scaleX(0); transform-origin: left;
-  transition: transform .4s ease;
-}
-.btn-submit:hover::before { transform: scaleX(1); }
-.btn-submit:hover { color: var(--black); }
-.btn-submit span { position: relative; z-index: 1; }
-.btn-submit svg { position: relative; z-index: 1; transition: transform .3s; }
-.btn-submit:hover svg { transform: translateX(4px); }
-.form-success {
-  display: none; padding: 20px 24px;
-  background: rgba(201,168,76,0.08); border: 1px solid var(--border);
-  font-size: .85rem; color: var(--gold-light);
-}
+  /* ===================== FAQ ===================== */
+  .faq { background: #fff; padding: 64px 20px; }
+  .faq-list { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .faq-item { background: var(--bg); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; }
+  .faq-q { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; font-size: .9rem; font-weight: 600; cursor: pointer; gap: 12px; -webkit-tap-highlight-color: transparent; }
+  .faq-q .faq-icon { min-width: 28px; height: 28px; border-radius: 50%; background: rgba(230,57,70,0.1); display: flex; align-items: center; justify-content: center; font-size: .9rem; transition: transform .3s; }
+  .faq-item.open .faq-q .faq-icon { transform: rotate(45deg); background: var(--red); color: #fff; }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s; font-size: .83rem; color: var(--muted); line-height: 1.65; padding: 0 18px; }
+  .faq-item.open .faq-a { max-height: 200px; padding: 0 18px 16px; }
 
-/* ── FOOTER ── */
-footer {
-  background: var(--charcoal);
-  border-top: 1px solid var(--border-subtle);
-  padding: 50px 5%;
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
-}
-.footer-logo { text-decoration: none; }
-.footer-logo-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--white);
-}
-.footer-logo-sub { font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-top: 3px; }
-.footer-copy { font-size: .72rem; font-weight: 300; color: var(--muted); letter-spacing: .5px; }
-.footer-links { display: flex; gap: 28px; }
-.footer-links a {
-  font-size: .7rem; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color .3s;
-}
-.footer-links a:hover { color: var(--gold); }
+  /* ===================== FINAL CTA ===================== */
+  .final-cta { background: linear-gradient(145deg, #1a1a1a 0%, #2d1a1a 100%); padding: 72px 24px; text-align: center; position: relative; overflow: hidden; }
+  .final-cta::before { content: '🇵🇪'; position: absolute; top: 30px; right: 30px; font-size: 3rem; opacity: .1; }
+  .final-cta::after { content: '✨'; position: absolute; bottom: 30px; left: 30px; font-size: 2rem; opacity: .15; }
+  .final-cta h2 { font-size: clamp(1.65rem, 6vw, 2.4rem); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+  .final-cta h2 em { color: var(--red-light); font-style: normal; }
+  .final-cta p { color: rgba(255,255,255,0.55); font-size: .95rem; line-height: 1.6; margin-bottom: 32px; max-width: 360px; margin-left: auto; margin-right: auto; }
+  .final-cta .cta-group { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .final-cta .cta-group .btn { max-width: 360px; width: 100%; }
+  .trust-row { display: flex; justify-content: center; gap: 20px; margin-top: 28px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 6px; font-size: .72rem; color: rgba(255,255,255,0.35); }
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: none; }
-}
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: .1s; }
-.reveal-delay-2 { transition-delay: .2s; }
-.reveal-delay-3 { transition-delay: .3s; }
+  /* ===================== FOOTER ===================== */
+  footer { background: #111; padding: 28px 20px; text-align: center; }
+  footer p { font-size: .72rem; color: rgba(255,255,255,0.2); line-height: 1.8; }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 1024px) {
-  .sobre-grid { grid-template-columns: 1fr; gap: 50px; }
-  .sobre-visual { max-width: 380px; }
-  .servicos-grid { grid-template-columns: 1fr 1fr; }
-  .service-card:nth-child(2) { border-right: none; }
-  .service-card:nth-child(3) { border-right: none; border-top: 1px solid var(--border-subtle); grid-column: 1/-1; }
-  .contato-grid { grid-template-columns: 1fr; gap: 50px; }
-}
-@media (max-width: 768px) {
-  section { padding: 80px 5%; }
-  .nav-links, .nav-cta { display: none; }
-  .nav-hamburger { display: flex; }
-  .servicos-grid { grid-template-columns: 1fr; }
-  .service-card { border-right: none !important; border-top: 1px solid var(--border-subtle); }
-  .service-card:first-child { border-top: none; }
-  .reviews-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .sobre-stats { grid-template-columns: 1fr 1fr; }
-  .stat:last-child { border-top: 1px solid var(--border); grid-column: 1/-1; border-right: none; }
-  .hero h1 { font-size: clamp(2.4rem, 8vw, 3.5rem); }
-  .hero-badge { display: none; }
-  footer { flex-direction: column; align-items: flex-start; }
-  .footer-links { flex-wrap: wrap; }
-}
-@media (max-width: 480px) {
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .sobre-visual { max-width: 100%; }
-  .sobre-accent { bottom: -10px; right: -10px; }
-}
+  /* ===================== KEYFRAMES ===================== */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: none; } }
+  @keyframes heroAvatarIn { from { opacity: 0; transform: scale(.7) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+
+  /* ===================== RESPONSIVE ===================== */
+  @media (min-width: 480px) {
+    .benefits-grid, .diffs-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 768px) {
+    .benefits-grid { grid-template-columns: repeat(4, 1fr); }
+    .diffs-grid { grid-template-columns: repeat(4, 1fr); }
+    .hero { justify-content: center; padding: 120px 20px 120px; }
+    .hero-content { max-width: 560px; }
+    .hero-cta-wrap { flex-direction: row; justify-content: center; }
+  }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">
-    <span class="nav-logo-name">Advocacia</span>
-    <span class="nav-logo-sub">Gimenez</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#avaliacoes">Avaliações</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="#contato" class="nav-cta">Fale Comigo</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20aprender%20espanhol!" class="wpp-float" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+  <span class="wpp-float-badge">1</span>
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.466.666 4.775 1.826 6.76L2 30l7.436-1.797A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
+    <path d="M22.406 19.594c-.306-.153-1.806-.892-2.086-.993-.28-.1-.483-.153-.686.154-.203.306-.789.993-.967 1.197-.178.204-.356.23-.662.077-.306-.154-1.29-.476-2.458-1.515-.908-.81-1.522-1.81-1.7-2.117-.178-.306-.019-.472.134-.624.137-.137.306-.357.459-.536.153-.179.204-.306.306-.51.103-.203.051-.382-.026-.535-.077-.153-.686-1.655-.94-2.267-.248-.596-.5-.515-.686-.525l-.586-.01c-.203 0-.535.077-.814.382-.28.306-1.07 1.046-1.07 2.552 0 1.506 1.096 2.96 1.248 3.163.153.204 2.157 3.294 5.228 4.622.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.806-.738 2.06-1.452.255-.714.255-1.326.178-1.453-.077-.127-.28-.204-.586-.357z" fill="#25D366"/>
+  </svg>
+</a>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#sobre" class="mobile-link">Sobre</a>
-  <a href="#servicos" class="mobile-link">Serviços</a>
-  <a href="#avaliacoes" class="mobile-link">Avaliações</a>
-  <a href="#contato" class="mobile-link">Contato</a>
+<!-- Sticky Bottom Bar -->
+<div class="sticky-bar">
+  <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20aprender%20espanhol!" class="btn btn-wpp" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.466.666 4.775 1.826 6.76L2 30l7.436-1.797A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff" opacity=".9"/><path d="M22.406 19.594c-.306-.153-1.806-.892-2.086-.993-.28-.1-.483-.153-.686.154-.203.306-.789.993-.967 1.197-.178.204-.356.23-.662.077-.306-.154-1.29-.476-2.458-1.515-.908-.81-1.522-1.81-1.7-2.117-.178-.306-.019-.472.134-.624.137-.137.306-.357.459-.536.153-.179.204-.306.306-.51.103-.203.051-.382-.026-.535-.077-.153-.686-1.655-.94-2.267-.248-.596-.5-.515-.686-.525l-.586-.01c-.203 0-.535.077-.814.382-.28.306-1.07 1.046-1.07 2.552 0 1.506 1.096 2.96 1.248 3.163.153.204 2.157 3.294 5.228 4.622.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.806-.738 2.06-1.452.255-.714.255-1.326.178-1.453-.077-.127-.28-.204-.586-.357z" fill="#fff"/></svg>
+    Quero aprender espanhol
+  </a>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-line"></div>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-bg-decor"></div>
+  <div class="hero-flags">🇧🇷 Para brasileiros &nbsp;·&nbsp; 🇵🇪 Professora nativa do Peru</div>
+  <div class="hero-avatar-wrap">
+    <div class="hero-avatar">👩‍🏫</div>
+    <span class="hero-avatar-badge">🟢 Online agora</span>
+  </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-line"></div>
-      <span>Advocacia Especializada · Suzano – SP</span>
-    </div>
-    <h1>Advocacia com<br><em>Excelência,</em><br>Ética e Humanização</h1>
-    <p class="hero-sub">Atendimento jurídico de alto nível, com dedicação genuína a cada caso. Sua segurança e tranquilidade são nossa prioridade.</p>
-    <div class="hero-actions">
-      <a href="#contato" class="btn-primary">
-        <span>Fale Comigo</span>
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#servicos" class="btn-ghost">
-        <span>Ver Serviços</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    <span class="hero-tag">⭐ +100 alunos satisfeitos</span>
+    <h1>Aprenda espanhol com uma <em>nativa do Peru</em> 🇵🇪</h1>
+    <p class="hero-sub">Fale espanhol com <strong style="color:rgba(255,255,255,0.9)">confiança e fluência</strong> em poucas semanas — com método prático e aulas personalizadas só para você.</p>
+    <div class="hero-cta-wrap">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20aprender%20espanhol!" class="btn btn-wpp btn-lg btn-full" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.466.666 4.775 1.826 6.76L2 30l7.436-1.797A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff" opacity=".8"/><path d="M22.406 19.594c-.306-.153-1.806-.892-2.086-.993-.28-.1-.483-.153-.686.154-.203.306-.789.993-.967 1.197-.178.204-.356.23-.662.077-.306-.154-1.29-.476-2.458-1.515-.908-.81-1.522-1.81-1.7-2.117-.178-.306-.019-.472.134-.624.137-.137.306-.357.459-.536.153-.179.204-.306.306-.51.103-.203.051-.382-.026-.535-.077-.153-.686-1.655-.94-2.267-.248-.596-.5-.515-.686-.525l-.586-.01c-.203 0-.535.077-.814.382-.28.306-1.07 1.046-1.07 2.552 0 1.506 1.096 2.96 1.248 3.163.153.204 2.157 3.294 5.228 4.622.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.806-.738 2.06-1.452.255-.714.255-1.326.178-1.453-.077-.127-.28-.204-.586-.357z" fill="#fff"/></svg>
+        Quero aprender espanhol
       </a>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-bar"></div>
-    <span>Scroll</span>
-  </div>
-  <div class="hero-badge">
-    <div class="hero-badge-number">100%</div>
-    <div class="hero-badge-text">Comprometimento<br>em cada caso</div>
-  </div>
-</section>
-
-<!-- SOBRE -->
-<section class="sobre" id="sobre">
-  <div class="sobre-grid">
-    <div class="sobre-visual reveal">
-      <div class="sobre-frame">
-        <div class="sobre-frame-monogram">AG</div>
-      </div>
-      <div class="sobre-accent">
-        <div class="sobre-accent-num">+10</div>
-        <div class="sobre-accent-label">Anos de<br>Experiência</div>
-      </div>
-    </div>
-    <div class="sobre-text">
-      <div class="section-tag reveal">Sobre</div>
-      <h3 class="reveal reveal-delay-1">Comprometimento<br>com cada <em>cliente</em></h3>
-      <p class="reveal reveal-delay-1">A Advocacia Gimenez construiu sua trajetória com base na excelência técnica, ética inabalável e busca incansável pelos melhores resultados. Cada caso é tratado com atenção singular e cuidado personalizado.</p>
-      <p class="reveal reveal-delay-2">Com atuação multidisciplinar, o escritório oferece segurança jurídica real para pessoas e empresas que buscam resolução eficaz de seus conflitos, com a clareza e a tranquilidade que todo cliente merece.</p>
-      <div class="sobre-stats reveal reveal-delay-2">
-        <div class="stat">
-          <div class="stat-num">Alta</div>
-          <div class="stat-label">Taxa de<br>Sucesso</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">Ética</div>
-          <div class="stat-label">Princípio<br>Central</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">Suzano</div>
-          <div class="stat-label">Base de<br>Atuação</div>
-        </div>
-      </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>+100</strong><span>Alunos</span></div>
+      <div class="hero-stat" style="border-left:1px solid rgba(255,255,255,0.1);padding-left:20px;"><strong>4.9★</strong><span>Avaliação</span></div>
+      <div class="hero-stat" style="border-left:1px solid rgba(255,255,255,0.1);padding-left:20px;"><strong>5 anos</strong><span>Experiência</span></div>
     </div>
   </div>
 </section>
 
-<div class="divider">
-  <div class="divider-line"></div>
-  <div class="divider-icon">&#9670;</div>
-  <div class="divider-line"></div>
-</div>
-
-<!-- SERVIÇOS -->
-<section class="servicos" id="servicos">
-  <div class="section-header reveal">
-    <div class="section-tag">Áreas de Atuação</div>
-    <h2 class="section-title">Soluções jurídicas<br>para <em>cada situação</em></h2>
-    <p class="section-desc">Atuação especializada com profundidade técnica e atenção às necessidades individuais de cada cliente.</p>
+<!-- ===================== BENEFITS ===================== -->
+<section class="benefits" id="beneficios">
+  <div class="reveal">
+    <span class="section-tag">✦ Por que aprender comigo</span>
+    <h2 class="section-title">Tudo que você <span>precisa</span> para aprender de verdade</h2>
+    <p class="section-sub">Sem métodos ultrapassados. Aqui você aprende espanhol real, do jeito que as pessoas falam de verdade.</p>
   </div>
-  <div class="servicos-grid">
-    <div class="service-card reveal">
-      <span class="service-num">01</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/><rect x="2" y="3" width="20" height="18" rx="1"/></svg>
-      </div>
-      <div class="service-title">Cível e Criminal</div>
-      <p class="service-desc">Atuação completa na defesa dos seus direitos, desde relações cíveis e contratos até defesa criminal especializada.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
+  <div class="benefits-grid">
+    <div class="benefit-card reveal delay-1">
+      <div class="benefit-icon">🎯</div>
+      <h4>Aulas Personalizadas</h4>
+      <p>O conteúdo é adaptado ao seu ritmo e seus objetivos específicos.</p>
     </div>
-    <div class="service-card reveal reveal-delay-1">
-      <span class="service-num">02</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-      </div>
-      <div class="service-title">Direito Administrativo</div>
-      <p class="service-desc">Defesa de servidores públicos, licitações, contratos administrativos e processos disciplinares com amplo domínio técnico.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
+    <div class="benefit-card reveal delay-2">
+      <div class="benefit-icon">🗣️</div>
+      <h4>Conversação Prática</h4>
+      <p>Foco em falar desde a primeira aula. Zero teoria sem uso real.</p>
     </div>
-    <div class="service-card reveal reveal-delay-2">
-      <span class="service-num">03</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-      </div>
-      <div class="service-title">Direito Imobiliário</div>
-      <p class="service-desc">Assessoria em compra, venda, locação, regularização de imóveis, usucapião e litígios envolvendo propriedades.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
+    <div class="benefit-card reveal delay-3">
+      <div class="benefit-icon">⚡</div>
+      <h4>Método Acelerado</h4>
+      <p>Técnicas comprovadas para você evoluir muito mais rápido.</p>
     </div>
-    <div class="service-card reveal">
-      <span class="service-num">04</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-      </div>
-      <div class="service-title">Direito Público</div>
-      <p class="service-desc">Proteção dos direitos frente à administração pública, atuando em mandados de segurança e ações civis públicas.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-    </div>
-    <div class="service-card reveal reveal-delay-1">
-      <span class="service-num">05</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-      </div>
-      <div class="service-title">Trabalhista</div>
-      <p class="service-desc">Defesa dos direitos do trabalhador e orientação corporativa, cobrindo rescisões, horas extras e assédio moral no trabalho.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
-      <span class="service-num">06</span>
-      <div class="service-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-      </div>
-      <div class="service-title">Previdenciário</div>
-      <p class="service-desc">Aposentadorias, pensões, auxílios e planejamento previdenciário para garantir o seu benefício junto ao INSS.</p>
-      <div class="service-arrow">
-        <span>Saiba mais</span>
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
+    <div class="benefit-card reveal delay-4">
+      <div class="benefit-icon">🇵🇪</div>
+      <h4>Professora Nativa</h4>
+      <p>Aprenda o espanhol autêntico, com sotaque, cultura e expressões reais.</p>
     </div>
   </div>
 </section>
 
-<div class="divider">
-  <div class="divider-line"></div>
-  <div class="divider-icon">&#9670;</div>
-  <div class="divider-line"></div>
-</div>
-
-<!-- AVALIAÇÕES -->
-<section class="avaliacoes" id="avaliacoes">
-  <div class="section-header reveal">
-    <div class="section-tag">Avaliações</div>
-    <h2 class="section-title">O que dizem<br>nossos <em>clientes</em></h2>
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="how" id="como-funciona">
+  <div class="reveal">
+    <span class="section-tag">⚡ Simples assim</span>
+    <h2 class="section-title">Começar é mais <span>fácil</span> do que você imagina</h2>
+    <p class="section-sub">Em 3 passos você já está na sua primeira aula de espanhol.</p>
   </div>
-  <div class="reviews-grid">
-    <div class="review-card reveal">
-      <div class="review-stars">
-        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+  <div class="steps">
+    <div class="step reveal delay-1">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h4>💬 Chame no WhatsApp</h4>
+        <p>Me mande uma mensagem. Vou te responder rápido para entender o que você precisa e tirar todas as suas dúvidas.</p>
       </div>
-      <p class="review-text">"Excelente profissional. Superou todas as minhas expectativas com atenção, competência e clareza em cada etapa do processo."</p>
-      <div class="review-author">
-        <div class="review-avatar">C</div>
+    </div>
+    <div class="step reveal delay-2">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h4>📋 Definimos seu nível e objetivo</h4>
+        <p>Seja você iniciante do zero, intermediário ou avançado — montamos um plano perfeito para você.</p>
+      </div>
+    </div>
+    <div class="step reveal delay-3">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h4>🎉 Começa as aulas e evolui rápido</h4>
+        <p>Aulas dinâmicas, leves e focadas em resultado. Você vai perceber a diferença desde o primeiro dia.</p>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top: 8px;">
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20a%20aprender%20espanhol!" class="btn btn-red btn-lg btn-full" target="_blank" rel="noopener">
+      Começar agora →
+    </a>
+  </div>
+</section>
+
+<!-- ===================== DIFFERENTIALS ===================== -->
+<section class="diffs" id="diferenciais">
+  <div class="reveal">
+    <span class="section-tag" style="background:rgba(230,57,70,0.2);color:#ff9999;">✦ Meus diferenciais</span>
+    <h2 class="section-title">Por que <span>eu</span> sou diferente</h2>
+    <p class="section-sub">Não sou só mais uma professora. Sou sua ponte para o espanhol de verdade.</p>
+  </div>
+  <div class="diffs-grid">
+    <div class="diff-card reveal delay-1">
+      <div class="diff-emoji">🇵🇪</div>
+      <h4>Nativa do Peru</h4>
+      <p>Espanhol autêntico, sem intermediários. A língua como ela realmente é falada.</p>
+    </div>
+    <div class="diff-card reveal delay-2">
+      <div class="diff-emoji">💃</div>
+      <h4>Aulas Leves e Divertidas</h4>
+      <p>Você aprende rindo. Método leve, sem pressão e sem travamentos.</p>
+    </div>
+    <div class="diff-card reveal delay-3">
+      <div class="diff-emoji">🎙️</div>
+      <h4>Fala Real, Não Teoria</h4>
+      <p>Aqui você aprende o que as pessoas usam de verdade no dia a dia.</p>
+    </div>
+    <div class="diff-card reveal delay-4">
+      <div class="diff-emoji">📅</div>
+      <h4>Horários Flexíveis</h4>
+      <p>Você escolhe quando quer aprender. Manhã, tarde ou noite — é você quem decide.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EMOTIONAL BANNER ===================== -->
+<section class="emo-banner">
+  <div class="reveal">
+    <h2>Pare de travar no espanhol 🚫</h2>
+    <div class="quote">"Você consegue aprender mais rápido do que imagina — só precisa do método e da professora certa."</div>
+    <p>Quantas vezes você já disse "vou aprender espanhol" e não foi pra frente? Chega de enrolação. Com aulas personalizadas e método prático, <strong>você vai falar espanhol de verdade.</strong></p>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20aprender%20espanhol!" class="btn btn-full" style="background:#fff;color:var(--red);font-weight:800;max-width:360px;" target="_blank" rel="noopener">
+      Sim, quero aprender agora! 🎯
+    </a>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials" id="depoimentos">
+  <div class="reveal">
+    <span class="section-tag">💬 Depoimentos</span>
+    <h2 class="section-title">O que meus <span>alunos</span> dizem</h2>
+    <p class="section-sub">Resultados reais de quem decidiu dar o primeiro passo.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testi-card reveal delay-1">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Em 2 meses já consigo me virar em espanhol! As aulas são super dinâmicas e ela explica de um jeito que você nunca esquece."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
         <div>
-          <div class="review-name">Carlos Mendes</div>
-          <div class="review-location">Suzano, SP</div>
+          <div class="testi-name">Camila R.</div>
+          <div class="testi-role">Viajou para a Espanha</div>
+          <span class="testi-badge">✓ Aluna verificada</span>
         </div>
       </div>
     </div>
-    <div class="review-card reveal reveal-delay-1">
-      <div class="review-stars">
-        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-      </div>
-      <p class="review-text">"Atendimento rápido, equipe muito atenciosa e sempre disponível. Me senti amparada em um momento muito difícil."</p>
-      <div class="review-author">
-        <div class="review-avatar">L</div>
+    <div class="testi-card reveal delay-2">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Aprendi mais em 1 mês do que em 2 anos de escola. Ela é uma professora incrível, paciente e muito didática!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
         <div>
-          <div class="review-name">Letícia Rocha</div>
-          <div class="review-location">Suzano, SP</div>
+          <div class="testi-name">Felipe M.</div>
+          <div class="testi-role">Trabalha com importação</div>
+          <span class="testi-badge">✓ Aluno verificado</span>
         </div>
       </div>
     </div>
-    <div class="review-card reveal reveal-delay-2">
-      <div class="review-stars">
-        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-      </div>
-      <p class="review-text">"Advogados extremamente humanos e dedicados. Trataram meu caso com seriedade e sensibilidade que raramente se encontra."</p>
-      <div class="review-author">
-        <div class="review-avatar">R</div>
+    <div class="testi-card reveal delay-3">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Tinha vergonha de falar, hoje me comunico com confiança. O método dela é diferente de tudo que já tentei antes."</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👩</div>
         <div>
-          <div class="review-name">Roberto Alves</div>
-          <div class="review-location">Mogi das Cruzes, SP</div>
+          <div class="testi-name">Juliana T.</div>
+          <div class="testi-role">Estudante universitária</div>
+          <span class="testi-badge">✓ Aluna verificada</span>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal delay-4">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Preciso do espanhol para o trabalho e em 3 meses já consigo fazer reuniões. Recomendo demais!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar">👨</div>
+        <div>
+          <div class="testi-name">Rafael S.</div>
+          <div class="testi-role">Analista de negócios</div>
+          <span class="testi-badge">✓ Aluno verificado</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider">
-  <div class="divider-line"></div>
-  <div class="divider-icon">&#9670;</div>
-  <div class="divider-line"></div>
-</div>
+<!-- ===================== PRICING ===================== -->
+<section class="pricing" id="planos">
+  <div class="reveal">
+    <span class="section-tag">💰 Investimento</span>
+    <h2 class="section-title">Aulas <span>acessíveis</span> para você evoluir</h2>
+    <p class="section-sub">Valores especiais para quem quer começar logo. Fale comigo para saber mais!</p>
+  </div>
+  <div class="pricing-card reveal">
+    <span class="pricing-tag-top">🔥 Mais popular</span>
+    <h3>Aula Particular Online</h3>
+    <div class="pricing-price">Consulte <span>/ aula</span></div>
+    <p class="pricing-desc">Valores personalizados conforme seu plano e frequência. Fale comigo!</p>
+    <ul class="pricing-features">
+      <li>Aula 1 a 1 totalmente personalizada</li>
+      <li>Material didático incluso</li>
+      <li>Suporte no WhatsApp entre aulas</li>
+      <li>Horários flexíveis (você escolhe)</li>
+      <li>Certificado de conclusão</li>
+    </ul>
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20das%20aulas%20de%20espanhol!" class="btn btn-wpp btn-lg btn-full" target="_blank" rel="noopener">
+      Ver valores no WhatsApp
+    </a>
+  </div>
+</section>
 
-<!-- CONTATO -->
-<section class="contato" id="contato">
-  <div class="contato-grid">
-    <div>
-      <div class="section-tag reveal">Contato</div>
-      <div class="contato-info">
-        <h3 class="reveal reveal-delay-1">Inicie uma<br><em>consulta</em> hoje</h3>
-        <p class="reveal reveal-delay-1">Entre em contato para agendar uma consulta. Respondemos com brevidade e discrição.</p>
-      </div>
-      <div class="contato-detail reveal reveal-delay-2">
-        <div class="contato-item">
-          <div class="contato-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="contato-item-label">Endereço</div>
-            <div class="contato-item-val">Suzano – SP</div>
-          </div>
-        </div>
-        <div class="contato-item">
-          <div class="contato-item-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="contato-item-label">Telefone / WhatsApp</div>
-            <div class="contato-item-val">(11) 4742-1944<br>(11) 94797-5052<br>(11) 99741-2106</div>
-          </div>
-        </div>
-        <div class="contato-item">
-          <div class="contato-item-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div>
-            <div class="contato-item-label">Horário</div>
-            <div class="contato-item-val">Segunda a Sexta<br>08:00 – 18:00</div>
-          </div>
-        </div>
-      </div>
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+  <div class="reveal">
+    <span class="section-tag">❓ Dúvidas frequentes</span>
+    <h2 class="section-title">Perguntas <span>frequentes</span></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal delay-1">
+      <div class="faq-q">Preciso ter algum conhecimento para começar?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Não! As aulas são para todos os níveis — do iniciante absoluto até o avançado. A primeira aula serve justamente para eu entender onde você está e criar o melhor plano para você.</div>
     </div>
-    <div class="reveal reveal-delay-2">
-      <form class="contact-form" id="contactForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-input" placeholder="Seu nome completo" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">E-mail</label>
-            <input type="email" class="form-input" placeholder="seu@email.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Telefone</label>
-          <input type="tel" class="form-input" placeholder="(16) 00000-0000">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Assunto</label>
-          <input type="text" class="form-input" placeholder="Descreva brevemente seu caso">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Mensagem</label>
-          <textarea class="form-textarea" placeholder="Conte-nos mais sobre sua situação..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">
-          <span>Enviar Mensagem</span>
-          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-        <div class="form-success" id="formSuccess">
-          Mensagem recebida. Entraremos em contato em breve.
-        </div>
-      </form>
+    <div class="faq-item reveal delay-2">
+      <div class="faq-q">As aulas são presenciais ou online?<span class="faq-icon">+</span></div>
+      <div class="faq-a">As aulas são 100% online pelo Google Meet, Zoom ou WhatsApp. Você aprende do conforto da sua casa, no horário que preferir!</div>
+    </div>
+    <div class="faq-item reveal delay-3">
+      <div class="faq-q">Em quanto tempo vou aprender a falar?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Depende do seu ritmo e frequência, mas com aulas 2x por semana, a maioria dos alunos já consegue ter conversas básicas em 4 a 6 semanas. O importante é praticar!</div>
+    </div>
+    <div class="faq-item reveal delay-4">
+      <div class="faq-q">Qual a diferença de aprender com uma nativa?<span class="faq-icon">+</span></div>
+      <div class="faq-a">Com uma professora nativa você aprende o espanhol real — as expressões, os sotaques, as gírias e a cultura. É a diferença entre aprender "livro" e aprender de verdade.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q">Como funciona a primeira aula?<span class="faq-icon">+</span></div>
+      <div class="faq-a">A primeira aula é um bate-papo para avaliar seu nível, entender seus objetivos e definir o melhor caminho para você. É leve, sem pressão e super tranquila!</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final-cta">
+  <div class="reveal">
+    <h2>Chame agora e <em>comece hoje</em> mesmo 🚀</h2>
+    <p>Não espere mais. Cada dia sem aprender é um dia a menos para você viver novas experiências com o espanhol.</p>
+    <div class="cta-group">
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20aprender%20espanhol!" class="btn btn-wpp btn-lg" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.466.666 4.775 1.826 6.76L2 30l7.436-1.797A13.93 13.93 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff" opacity=".8"/><path d="M22.406 19.594c-.306-.153-1.806-.892-2.086-.993-.28-.1-.483-.153-.686.154-.203.306-.789.993-.967 1.197-.178.204-.356.23-.662.077-.306-.154-1.29-.476-2.458-1.515-.908-.81-1.522-1.81-1.7-2.117-.178-.306-.019-.472.134-.624.137-.137.306-.357.459-.536.153-.179.204-.306.306-.51.103-.203.051-.382-.026-.535-.077-.153-.686-1.655-.94-2.267-.248-.596-.5-.515-.686-.525l-.586-.01c-.203 0-.535.077-.814.382-.28.306-1.07 1.046-1.07 2.552 0 1.506 1.096 2.96 1.248 3.163.153.204 2.157 3.294 5.228 4.622.73.315 1.3.503 1.744.644.733.233 1.4.2 1.927.121.588-.088 1.806-.738 2.06-1.452.255-.714.255-1.326.178-1.453-.077-.127-.28-.204-.586-.357z" fill="#fff"/></svg>
+        Falar no WhatsApp agora
+      </a>
+    </div>
+    <div class="trust-row">
+      <span class="trust-item">🔒 Sem compromisso</span>
+      <span class="trust-item">⚡ Resposta rápida</span>
+      <span class="trust-item">🎯 100% personalizado</span>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <a href="#hero" class="footer-logo">
-    <div class="footer-logo-name">Advocacia Gimenez</div>
-  </a>
-  <div class="footer-copy">© 2026 Advocacia Gimenez. Todos os direitos reservados.</div>
-  <div class="footer-links">
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </div>
+  <p>👩‍🏫 Professora de Espanhol Nativa do Peru 🇵🇪<br>
+  Aulas online para todo o Brasil · WhatsApp: (11) 99999-9999<br>
+  © 2025 · Todos os direitos reservados</p>
 </footer>
 
 <script>
-(function(){
+  /* ===== SCROLL REVEAL ===== */
+  (function() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
-
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    const open = hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      observer.observe(el);
     });
-  });
+  })();
 
-  const revealObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        revealObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const offset = 72;
-        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
-      }
-    });
-  });
-
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit span');
-    btn.textContent = 'Enviando...';
-    setTimeout(() => {
-      form.reset();
-      btn.textContent = 'Enviar Mensagem';
-      success.style.display = 'block';
-      setTimeout(() => { success.style.display = 'none'; }, 5000);
-    }, 1200);
-  });
-
-  document.querySelectorAll('.btn-primary, .btn-submit').forEach(btn => {
+  /* ===== RIPPLE EFFECT ===== */
+  document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', function(e) {
-      if(navigator.vibrate) navigator.vibrate(30);
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple-el';
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height) * 1.8;
+      ripple.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size/2}px;top:${e.clientY - rect.top - size/2}px;`;
+      this.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+      if (navigator.vibrate) navigator.vibrate(35);
     });
   });
 
-})();
+  /* ===== FAQ ACCORDION ===== */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* ===== SMOOTH COUNTER HERO STATS ===== */
+  function animateValue(el, start, end, duration, suffix = '') {
+    let startTime = null;
+    const step = (ts) => {
+      if (!startTime) startTime = ts;
+      const progress = Math.min((ts - startTime) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(start + (end - start) * ease) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const statsObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const stats = entry.target.querySelectorAll('.hero-stat strong');
+        if (stats[0]) animateValue(stats[0], 0, 100, 1400, '+');
+        if (stats[1]) {
+          let t = null;
+          const el = stats[1];
+          const start = performance.now();
+          const run = (now) => {
+            const p = Math.min((now - start) / 1400, 1);
+            const v = (4 + p).toFixed(1);
+            el.textContent = v + '★';
+            if (p < 1) t = requestAnimationFrame(run);
+          };
+          t = requestAnimationFrame(run);
+        }
+        statsObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) statsObs.observe(heroStats);
 </script>
 </body>
 </html>
